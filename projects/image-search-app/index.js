@@ -1,5 +1,4 @@
 const accessKey = "RZEIOVfPhS7vMLkFdd2TSKGFBS4o9_FmcV1Nje3FSjw";
-
 const formEl = document.querySelector("form");
 const searchInputEl = document.getElementById("search-input");
 const searchResultsEl = document.querySelector(".search-results");
@@ -23,9 +22,11 @@ async function searchImages() {
   results.map((result) => {
     const imageWrapper = document.createElement("div");
     imageWrapper.classList.add("search-result");
+    
     const image = document.createElement("img");
     image.src = result.urls.small;
     image.alt = result.alt_description;
+    
     const imageLink = document.createElement("a");
     imageLink.href = result.links.html;
     imageLink.target = "_blank";
